@@ -1,0 +1,11 @@
+<div *ngIf="patients.length > 0">
+  <h1>All Patients</h1>
+  <ul>
+    <li *ngFor="let patient of patients">
+      {{ patient.name }} - {{ patient.age }} - {{ patient.gender }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="patients.length === 0">
+  <p>No patients found.</p>
+</div>
