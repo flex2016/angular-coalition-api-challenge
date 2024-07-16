@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.apiService.getPatients().subscribe(
       (data: any[]) => {
+        console.log('🚀 ~ AppComponent ~ ngOnInit ~ data:', data);
         this.patients = data;
       },
       (error: any) => {

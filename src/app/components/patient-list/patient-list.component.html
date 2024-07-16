@@ -1,11 +1,32 @@
-<div *ngIf="patients.length > 0">
-  <h1>All Patients</h1>
-  <ul>
-    <li *ngFor="let patient of patients">
-      {{ patient.name }} - {{ patient.age }} - {{ patient.gender }}
-    </li>
-  </ul>
-</div>
-<div *ngIf="patients.length === 0">
-  <p>No patients found.</p>
+<div class="patients-container">
+  <div class="top-container">
+    <div class="patients">Patients</div>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div class="patient-list">
+    <div *ngIf="patients.length > 0">
+      <div
+        *ngFor="let patient of patients; let i = index"
+        class="patient-details"
+      >
+        <div class="patient-info">
+          <img src="{{ patients[i].profile_picture }}" alt="Patient image" />
+          <div class="patient-d">
+            <div class="name">{{ patients[i].name }}</div>
+            <div class="patient-g-a">
+              <div class="gender">{{ patients[i].gender }},</div>
+              <div class="age">{{ patients[i].age }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="patient-nav-cont">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="patients.length === 0">
+      <p>No patients found.</p>
+    </div>
+  </div>
 </div>
