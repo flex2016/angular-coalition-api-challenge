@@ -1,0 +1,16 @@
+<div *ngIf="patient">
+  <h2>Diagnostic List</h2>
+  <div class="patient-info">
+    <img [src]="patient.profile_picture" alt="Patient image" />
+    <div class="patient-d">
+      <div class="name">{{ patient.name }}</div>
+      <div class="patient-g-a">
+        <div class="gender">{{ patient.gender }},</div>
+        <div class="age">{{ patient.age }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!patient">
+  <p>Please select a patient from the list.</p>
+</div>

@@ -7,9 +7,10 @@ import { PatientListComponent } from './components/patient-list/patient-list.com
 // import { AuthService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
+import { DiagnosticListComponent } from './components/diagnostic-list/diagnostic-list.component';
 
 @NgModule({
-  declarations: [AppComponent, PatientListComponent, HeaderComponent],
+  declarations: [AppComponent, PatientListComponent, HeaderComponent, DiagnosticListComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

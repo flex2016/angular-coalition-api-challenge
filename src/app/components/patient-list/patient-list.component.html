@@ -9,6 +9,8 @@
       <div
         *ngFor="let patient of patients; let i = index"
         class="patient-details"
+        [class.selected]="patient.name === selectedPatientName"
+        (click)="onSelect(patient)"
       >
         <div class="patient-info">
           <img src="{{ patients[i].profile_picture }}" alt="Patient image" />
