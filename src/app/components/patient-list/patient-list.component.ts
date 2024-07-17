@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 
+//TDO - udpe to use signal
 @Component({
   selector: 'app-patient-list',
   templateUrl: './patient-list.component.html',

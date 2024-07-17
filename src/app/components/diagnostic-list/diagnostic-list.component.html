@@ -1,15 +1,24 @@
-<div *ngIf="patient">
+<div class="diagnosis-container" *ngIf="patient">
   <h2>Diagnostic List</h2>
-  <div class="patient-info">
-    <img [src]="patient.profile_picture" alt="Patient image" />
-    <div class="patient-d">
-      <div class="name">{{ patient.name }}</div>
-      <div class="patient-g-a">
-        <div class="gender">{{ patient.gender }},</div>
-        <div class="age">{{ patient.age }}</div>
-      </div>
-    </div>
-  </div>
+  <table class="diagnosis-table">
+    <thead>
+      <tr>
+        <th class="diagnosis-header">Problem/Diagnosis</th>
+        <th class="description-header">Description</th>
+        <th class="status-header">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let diagnosis of patient.diagnostic_list"
+        class="diagnosis-detail"
+      >
+        <td class="diagnosis">{{ diagnosis.name }}</td>
+        <td class="diagnosis">{{ diagnosis.description }}</td>
+        <td class="diagnosis">{{ diagnosis.status }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <div *ngIf="!patient">
   <p>Please select a patient from the list.</p>
