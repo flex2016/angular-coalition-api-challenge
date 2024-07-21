@@ -1,0 +1,32 @@
+.lab-container {
+  max-width: 367px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  height: 296px;
+  overflow-y: scroll;
+  h2 {
+    font: normal normal 800 24px/33px Manrope;
+    color: #072635;
+    letter-spacing: 0px;
+    padding: 0 20px;
+  }
+  .results {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f6f7f8;
+    }
+    h3 {
+      font: normal normal normal 13px/18px Manrope;
+      letter-spacing: 0px;
+      color: #072635;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="lab-container" *ngIf="patient">
+  <h2>Lab Results</h2>
+
+  <div class="results" *ngFor="let result of patient.lab_results">
+    <h3>{{ result }}</h3>
+    <i class="fa-solid fa-download"></i>
+  </div>
+</div>
+<div *ngIf="!patient">
+  <p>Please select a patient from the list.</p>
+</div>

@@ -1,0 +1,45 @@
+<div class="patient-details-container" *ngIf="patient">
+  <div class="image-container">
+    <img [src]="patient.profile_picture" />
+    <div class="patient-name">{{ patient.name }}</div>
+  </div>
+  <div class="dob-container">
+    <i class="fa-regular fa-calendar"></i>
+    <div class="dob">
+      <span class="label">Date of Birth</span>
+      <span class="value">{{ patient.date_of_birth | date }}</span>
+    </div>
+  </div>
+  <div class="gender-container">
+    <i class="fas fa-venus-mars"></i>
+    <div class="gender">
+      <span class="label">Gender</span
+      ><span class="value">{{ patient.gender }}</span>
+    </div>
+  </div>
+
+  <div class="contact-info-container">
+    <i class="fas fa-phone"></i>
+    <div class="contact">
+      <span class="label">Contact Info</span
+      ><span class="value">{{ patient.phone_number }}</span>
+    </div>
+  </div>
+  <div class="emergency-contact-container">
+    <i class="fas fa-address-book"></i>
+    <div class="emergency">
+      <span class="label">Emergency Contact</span
+      ><span class="value">{{ patient.emergency_contact }}</span>
+    </div>
+  </div>
+  <div class="insurance-provider-container">
+    <i class="fas fa-medkit"></i>
+    <div class="insurance">
+      <span class="label">Insurance Provider</span
+      ><span class="value">{{ patient.insurance_type }}</span>
+    </div>
+  </div>
+  <div class="show-info-container">
+    <button class="show-info-button">Show All Information</button>
+  </div>
+</div>

@@ -8,9 +8,11 @@ import { PatientListComponent } from './components/patient-list/patient-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { DiagnosticListComponent } from './components/diagnostic-list/diagnostic-list.component';
+import { LabResultsComponent } from './components/lab-results/lab-results.component';
+import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
 
 @NgModule({
-  declarations: [AppComponent, PatientListComponent, HeaderComponent, DiagnosticListComponent],
+  declarations: [AppComponent, PatientListComponent, HeaderComponent, DiagnosticListComponent, LabResultsComponent, PatientDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
