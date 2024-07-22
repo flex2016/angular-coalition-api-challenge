@@ -1,0 +1,29 @@
+<div *ngIf="patient">
+  <div
+    class="diagnosis-history-container"
+    *ngFor="let month of patient.diagnosis_history"
+  >
+    <h1 class="title">Diagnosis History</h1>
+    <div class="chart-container">Chart</div>
+    <div class="diagnosis-detail-container">
+      <div class="resp-rate-container">
+        <img src="../../../../assets/img/respiratory-rate.png" alt="" />
+        <div class="resp-rate">Respiratory Rate</div>
+        <div class="rate">{{ month.respiratory_rate.value }} bpm</div>
+        <div class="desc">{{ month.respiratory_rate.levels }}</div>
+      </div>
+      <div class="temperature-container">
+        <img src="../../../../assets/img/temperature.png" alt="" />
+        <div class="temperature">Temperature</div>
+        <div class="temp">{{ month.temperature.value }} °C</div>
+        <div class="desc">{{ month.temperature.levels }}</div>
+      </div>
+      <div class="heart-rate-container">
+        <img src="../../../../assets/img/HeartBPM.png" alt="" />
+        <div class="heart-rate">Heart Rate</div>
+        <div class="rate">{{ month.heart_rate.value }} bpm</div>
+        <div class="desc">{{ month.heart_rate.levels }}</div>
+      </div>
+    </div>
+  </div>
+</div>

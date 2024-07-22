@@ -10,9 +10,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { DiagnosticListComponent } from './components/diagnostic-list/diagnostic-list.component';
 import { LabResultsComponent } from './components/lab-results/lab-results.component';
 import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
+import { DiagnosisHistoryComponent } from './components/diagnosis-history/diagnosis-history.component';
 
 @NgModule({
-  declarations: [AppComponent, PatientListComponent, HeaderComponent, DiagnosticListComponent, LabResultsComponent, PatientDetailsComponent],
+  declarations: [AppComponent, PatientListComponent, HeaderComponent, DiagnosticListComponent, LabResultsComponent, PatientDetailsComponent, DiagnosisHistoryComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
